@@ -1,0 +1,17 @@
+_init: CODE, 3610 0 43
+i1___ftadd: CODE, 343 0 324
+_get_temp: CODE, 1348 0 174
+i1___fttol: CODE, 1688 0 166
+___ftpack: CODE, 3971 0 125
+_main: CODE, 1854 0 163
+___lwtoft: CODE, 2017 0 25
+___ftadd: CODE, 19 0 324
+i1___ftmul: CODE, 903 0 236
+i1___ftpack: CODE, 3848 0 123
+_pi: CODE, 1139 0 209
+_isr: CODE, 3653 0 87
+___ftmul: CODE, 667 0 236
+___awtoft: CODE, 3568 0 42
+___fttol: CODE, 1522 0 166
+___ftge: CODE, 3740 0 108
+Total: 2551

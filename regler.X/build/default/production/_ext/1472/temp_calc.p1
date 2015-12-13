@@ -1,0 +1,54 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;temp_calc.h: 15: extern unsigned int get_temp(unsigned int digi_value);
+"13 ../temp_calc.c
+[v _get_temp `(ui ~T0 1 ef1`ui ]
+{
+[; ;temp_calc.c: 12: unsigned int get_temp(unsigned int digi_value)
+[; ;temp_calc.c: 13: {
+[e :U _get_temp ]
+[v _digi_value `ui ~T0 1 r1 ]
+[f ]
+"14
+[v _input `f ~T0 1 a ]
+"15
+[v _result `i ~T0 1 a ]
+[; ;temp_calc.c: 14: float input;
+[; ;temp_calc.c: 15: int result;
+[; ;temp_calc.c: 17: input = (float)digi_value;
+"17
+[e = _input -> _digi_value `f ]
+[; ;temp_calc.c: 18: result = (int) (0.000069930561 * (input * input) + -0.17929916 * input + 97.982055);
+"18
+[e = _result -> + + * .0.000069930561 -> * _input _input `d * -U .0.17929916 -> _input `d .97.982055 `i ]
+[; ;temp_calc.c: 20: if (result < 0) {
+"20
+[e $ ! < _result -> 0 `i 2  ]
+{
+[; ;temp_calc.c: 21: return 0;
+"21
+[e ) -> -> 0 `i `ui ]
+[e $UE 1  ]
+"22
+}
+[; ;temp_calc.c: 22: } else if (result > 100) {
+[e $U 3  ]
+[e :U 2 ]
+[e $ ! > _result -> 100 `i 4  ]
+{
+[; ;temp_calc.c: 23: return 100;
+"23
+[e ) -> -> 100 `i `ui ]
+[e $UE 1  ]
+"24
+}
+[e :U 4 ]
+"25
+[e :U 3 ]
+[; ;temp_calc.c: 24: }
+[; ;temp_calc.c: 25: return (unsigned int)result;
+[e ) -> _result `ui ]
+[e $UE 1  ]
+[; ;temp_calc.c: 120: }
+"120
+[e :UE 1 ]
+}

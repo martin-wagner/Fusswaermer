@@ -1,0 +1,25 @@
+
+# 1 "../temp_calc.c"
+
+# 15 "../temp_calc.h"
+extern unsigned int get_temp(unsigned int digi_value);
+
+# 12 "../temp_calc.c"
+unsigned int get_temp(unsigned int digi_value)
+{
+float input;
+int result;
+
+input = (float)digi_value;
+result = (int) (0.000069930561 * (input * input) + -0.17929916 * input + 97.982055);
+
+if (result < 0) {
+return 0;
+} else if (result > 100) {
+return 100;
+}
+return (unsigned int)result;
+
+# 120
+}
+
